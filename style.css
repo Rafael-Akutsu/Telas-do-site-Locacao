@@ -523,3 +523,8 @@ h2 {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.game-card a{
+  text-decoration: none;
+  color: white;
+}
