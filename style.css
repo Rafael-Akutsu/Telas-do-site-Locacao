@@ -169,17 +169,79 @@ h2 {
 
 .product {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 12px;
+  align-items: flex-start;
 }
 
-.product img {
+.imagem-com-carrossel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+#main-image {
   width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
+  height: 550px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Novo código para a barra de rolagem */
+::-webkit-scrollbar {
+  height: 10px; /* Altura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2a2a2a; /* Cor do fundo da barra de rolagem */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#ffffff; /* Cor do polegar */
+  border-radius: 10px;
+  border: 2px solid #2a2a2a; /* Borda sutil */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4b0aac; /* Cor do polegar ao passar o mouse */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #4b0aac; /* Cor do polegar ao clicar */
+}
+
+
+
+.thumbnail-carousel {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  max-width: 100%;
+}
+
+.thumbnail-carousel img {
+  width: 240px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.thumbnail-carousel img:hover {
+  border-color: #7c3bdd;
+}
+
+.active-thumb {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 6px #4b0aac;
 }
 
 .details {
@@ -210,11 +272,13 @@ h2 {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  box-shadow: 0 0 0 transparent;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .buy-btn:hover {
-  background-color: #4b0aac;
-}
+  transform: translateY(-8px);
+  box-shadow: 0 0 12px #4b0aac, 0 0 24px #4b0aac;}
 
 .footer {
 
@@ -604,3 +668,4 @@ body {
   color: var(--muted-color);
   margin-bottom: 0.3rem;
 }
+

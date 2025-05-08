@@ -56,3 +56,20 @@ updateClasses();
     atualizarLancamentos();
   });
   
+
+  function trocarImagem(el) {
+    document.getElementById('main-image').src = el.src;
+  }
+
+  function trocarImagem(el) {
+    // Troca a imagem principal
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = el.src;
+
+    // Remove destaque anterior
+    const miniaturas = document.querySelectorAll('.thumbnail-carousel img');
+    miniaturas.forEach(img => img.classList.remove('active-thumb'));
+
+    // Adiciona destaque na nova miniatura
+    el.classList.add('active-thumb');
+  }
