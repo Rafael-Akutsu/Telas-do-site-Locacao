@@ -55,3 +55,4 @@ updateClasses();
     window.addEventListener('resize', atualizarLancamentos);
     atualizarLancamentos();
   });
+  
