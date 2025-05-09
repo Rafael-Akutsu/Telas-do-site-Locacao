@@ -610,6 +610,7 @@ body {
 /* Histórico de Aluguel */
 .historico-aluguel {
   padding: 2rem;
+  width: 90%;
 }
 
 .historico-aluguel h2 {
@@ -631,6 +632,7 @@ body {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .alugado-card:hover{
