@@ -75,13 +75,6 @@ body {
   text-align: center;
 }
 
-.profile-icon {
-  width: 45px;
-  height: 45px;
-  background-color: white;
-  border-radius: 50%;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -667,3 +660,37 @@ body {
   margin-bottom: 0.3rem;
 }
 
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown oculto por padrão */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  z-index: 10;
+  padding: 0.5rem 0;
+  min-width: 120px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #4b0aac;
+}

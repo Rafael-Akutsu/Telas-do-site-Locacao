@@ -73,3 +73,18 @@ updateClasses();
     // Adiciona destaque na nova miniatura
     el.classList.add('active-thumb');
   }
+
+  function toggleDropdown() {
+  const menu = document.getElementById("dropdownMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+// Fecha o dropdown ao clicar fora
+document.addEventListener("click", function (e) {
+  const icon = document.querySelector(".profile-icon");
+  const menu = document.getElementById("dropdownMenu");
+
+  if (!icon.contains(e.target)) {
+    menu.style.display = "none";
+  }
+});

@@ -27,13 +27,6 @@
         </a>
        
       </button>
-      
-      <button class ="nav-icon">PS4
-        <a 
-          href=""> <!--link do ps4.html-->
-        </a>
-
-      </button>
 
       <button class ="nav-icon">Aluguel
         <a 
@@ -41,12 +34,15 @@
         </a>
 
       </button>
-      <div class="profile-icon"></div>
-    </div>
+      <div class="profile-icon" onclick="toggleDropdown()">
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="">Entrar</a> <!--link do login_roxo.html-->
+  </div>
+</div>
   </header>
 
   <section class="ps4-section">
-    <h2 class="glow-title">JOGOS PARA PS5</h2>
+    <h2 class="glow-title">CATÁLOGO DE JOGOS</h2>
     <div class="ps4-grid">
       <div class="game-card">
         <a href="">
@@ -113,5 +109,7 @@
       <p class="footer-copy">© 2025 GAME OVER. Todos os direitos reservados.</p>
     </div>
   </footer> 
+
+  <script src="script.js"></script>
 </body>
 </html>
