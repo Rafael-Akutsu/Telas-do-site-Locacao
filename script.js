@@ -88,3 +88,39 @@ document.addEventListener("click", function (e) {
     menu.style.display = "none";
   }
 });
+
+function trocarImagem(el) {
+  const mainImage = document.getElementById('main-image');
+  const container = mainImage.parentElement;
+
+  // Remover thumb ativa anterior
+  const miniaturas = document.querySelectorAll('.thumbnail-carousel img');
+  miniaturas.forEach(img => img.classList.remove('active-thumb'));
+  el.classList.add('active-thumb');
+
+  // Verifica se é vídeo
+  if (el.dataset.video) {
+    const iframe = document.createElement('iframe');
+    iframe.src = el.dataset.video;
+    iframe.width = '100%';
+    iframe.height = '550';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.frameBorder = '0';
+
+    // Substitui o conteúdo atual
+    mainImage.replaceWith(iframe);
+    iframe.id = 'main-image';
+  } else {
+    // Troca por imagem
+    const newImg = document.createElement('img');
+    newImg.src = el.src;
+    newImg.id = 'main-image';
+    newImg.style.width = '100%';
+    newImg.style.height = '550px';
+    newImg.style.objectFit = 'contain';
+    newImg.style.borderRadius = '12px';
+
+    mainImage.replaceWith(newImg);
+  }
+}
